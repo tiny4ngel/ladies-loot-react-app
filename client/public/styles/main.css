@@ -1,0 +1,375 @@
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Intro', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Intro', sans-serif;
+}
+
+body {
+    padding-top: 60px; 
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-180deg, #ffd1fc 0%, #fad0c6 100%); 
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5%;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #f292cf; 
+    margin: 0 15px;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar nav a:hover {
+    background-color: #f292cf; 
+    color: #ffffff; 
+}
+
+
+.logo {
+    width: 90px; 
+}
+
+.hero-title {
+    font-size: 6em; 
+    color: white; 
+    text-shadow:
+        -1px -1px 0 #89678f, 
+        1px -1px 0 #89678f, 
+        -1px 1px 0 #89678f, 
+        1px 1px 0 #89678f; /
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.hero-text h3 {
+    font-size: 1.3em;
+    color: #89678f;
+    margin-bottom: 20px; 
+}
+
+p {
+    font-family: 'Roboto Mono', monospace; 
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 1em;
+    max-width: 600px;
+    white-space: normal;
+}
+
+.pixel {
+    width: 80px; 
+    height: auto; 
+   
+}
+
+.main-button {
+    font-size: 1em;
+    padding: 10px 30px;
+    border-radius: 30px; 
+    border: none;
+    background-color: white;
+    color: #f292cf; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s; 
+}
+
+.main-button:hover {
+    background-color: #f292cf; 
+    color: white; 
+    border-radius: 15px; 
+}
+
+
+button:hover {
+    background-color: #f7f7f7;
+}
+
+.character-image {
+    max-width: 900px; 
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+    
+    
+}
+
+.products-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 100px 20px;
+}
+
+.section-header {
+    text-align: center;
+    padding: 20px; 
+}
+
+.section-header h2 {
+    font-size: 2.5em; 
+    color: #f996cb; 
+    margin-bottom: 0.5em; 
+}
+
+.section-header .heart-icon {
+    height: 40px; 
+    display: block; 
+    margin: 0 auto 10px;
+}
+
+.section-header p {
+    font-size: 1em; 
+    margin: 20px auto; 
+    text-align: center; 
+    max-width: 600px; 
+}
+
+.products-section h3 {
+    font-size: 2em; 
+    color: #f996cb; 
+    margin-bottom: 1em; 
+    margin-top: 1em;
+}
+
+.products-section h3 + .heart-icon {
+    height: 40px; 
+    margin-bottom: 2em; 
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; 
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; 
+}
+
+.image-container {
+    background: linear-gradient(-180deg, #ffd1fc 0%, #fad0c6 100%);
+    border-radius: 50%;
+    width: 200px; 
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; 
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+.product-item img {
+    max-width: none; 
+    width: auto; 
+    height: 100%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.product-item button {
+    background-color: #ffd1fc; 
+    border: none;
+    border-radius: 20px; 
+    padding: 10px 20px;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-item button:hover {
+    background-color: #fcb0d9; 
+    transform: translateY(-3px); 
+}
+
+
+
+footer {
+    background-color: #f292cf; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Intro', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffd1fc; 
+}
+
+.footer-heart {
+    width: 50px; 
+    height: auto;
+    margin: 15px 0;
+}
+
+footer p {
+    margin: 5px 0;
+    color: white;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto; 
+    }
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    .character-image {
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar nav a {
+        margin: 10px 0;
+    }
+    .hero-title {
+        font-size: 3em; 
+        margin: 20px 0; 
+    }
+
+    .section-header h2 {
+        font-size: 2em; 
+    }
+
+    .section-header .heart-icon {
+        height: 30px; 
+    }
+
+    .section-header p {
+        font-size: 0.9em; 
+        margin: 10px auto; 
+        max-width: 80%; 
+    }
+
+    .products-section {
+        padding: 50px 10px; 
+    }
+
+    .product-item {
+        width: 100%; 
+    }
+
+    .image-container {
+        width: 150px; 
+        height: 150px;
+        margin-bottom: 10px; 
+    }
+
+    .product-item img {
+        height: 110%; 
+    }
+
+    .product-item button {
+        font-size: 0.9em; 
+        padding: 8px 16px; 
+    }
+    footer p {
+        font-size: 0.8em;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-nav a {
+        margin: 5px;
+    }
+}
+

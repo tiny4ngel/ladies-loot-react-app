@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 70px; 
+    padding: 0;
+    background: #ffffff; 
+}
+
+
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+
+.search-container {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    position: relative; 
+    top: 40px; 
+    z-index: 10; /
+}
+
+.search-input {
+    padding: 10px;
+    border: 2px solid #f292cf;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 300px; 
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #f292cf;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Products Grid */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center; 
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .category-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 20px; 
+    margin-top: 20px; 
+    font-size: 1.5em;  
+    color: #333;      
+}
+  
+  .item {
+    background-color: #ffd1fc; 
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 250px; 
+    margin: auto;
+  }
+  
+  .product-image-container {
+    padding: 1rem;
+    background-color: #fde3f8;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .product-image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-image-container:hover img {
+    transform: scale(1.05);
+  }
+  
+  .product-details {
+    padding: 1rem;
+    background: #fde3f8; 
+    border-radius: 0 0 20px 20px; 
+  }
+  
+  .product-name {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-price {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  
+  .wishlist-btn,
+  .cart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: color 0.3s ease; 
+  }
+  
+  .wishlist-btn:hover,
+  .cart-btn:hover {
+    color: #f292cf; 
+  }
+  
+  @media (max-width: 1200px) {
+    .products-container {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .products-container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .products-container {
+      grid-template-columns: 1fr; 
+      margin-top: 60px; 
+    }
+  
+    .navbar, .search-container, .footer-content {
+      padding: 10px;
+    }
+  
+    .search-input, .search-button {
+      width: calc(100% - 20px); 
+      margin-bottom: 10px; 
+    }
+  
+    .search-button {
+      width: auto; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+  
+    .category-title {
+      font-size: 1.2em;
+      margin-left: 10px;
+      margin-top: 15px;
+    }
+  }
