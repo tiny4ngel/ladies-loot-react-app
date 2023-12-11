@@ -1,25 +1,22 @@
 const baseUrl = 'http://localhost:3030/'
 
 const buildOptions = (data) => {
-    const options = {};
+    const options = {
+        headers: {}
+    };
 
     if (data) {
         options.body = JSON.stringify(data);
-        options.headers = {
-            'content-type': 'application/json'
-        };
     }
 
     const token = localStorage.getItem('accessToken');
 
     if (token) {
-        options.headers = {
-            ...options.headers,
-            'X-Authorization': token
-        };
+        options.headers['X-Authorization'] = token;
     }
 
     return options;
+    
 };
 
 const request = async (method, url, data) => {
@@ -34,7 +31,10 @@ const request = async (method, url, data) => {
 
     const result = await response.json();
 
-    if (!response.ok) {
+    if(response.ok && result.accessToken){
+        localStorage.setItem('accessToken', result.accessToken);
+    }
+    else if (!response.ok) {
         if (response.status === 403) {
             localStorage.removeItem('accessToken');
         }

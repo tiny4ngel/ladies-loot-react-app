@@ -15,9 +15,6 @@ export default function Login() {
         [LoginFormKeys.Password]: '',
     });
 
-    console.log("---Login component----")
-    console.log("Values ...>", values)
-    console.log("Keys ...>", LoginFormKeys)
 
     return (
         <div className="login-container">
@@ -47,7 +44,7 @@ export default function Login() {
                             value={values.Password} />
                     </div>
                     <div className="input-group">
-                        <button type="submit" onClick={loginSubmitHandler}>LOGIN</button>
+                        <button type="submit">LOGIN</button>
                     </div>
                 </form>
                 <div className="sign-up-text">
