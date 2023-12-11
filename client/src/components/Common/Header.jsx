@@ -19,7 +19,7 @@ export default function Header() {
             <>
             <Link to="#">Community</Link>
             <Link to="#">Support</Link>
-            <Link to="#">Logout</Link>
+            <Link to="/logout">Logout</Link>
             </>
           )}
           {!isAuthenticated &&(

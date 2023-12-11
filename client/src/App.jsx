@@ -11,6 +11,7 @@ import Home from "./components/Home/Home"
 import Products from './components/Products/Products';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import Logout from './components/Logout/Logout';
 
 
 function App() {
@@ -31,15 +32,24 @@ function App() {
     setAuth(result)
 
     navigate(Path.Home)
-  }
+  };
+
+  const logoutHandler = () => {
+    setAuth({});
+
+    navigate(Path.Home)
+
+    localStorage.removeItem('accessToken');
+  };
 
   const values = {
     loginSubmitHandler,
     registerSubmitHandler,
+    logoutHandler,
     username: auth.username,
     email: auth.email,
     isAuthenticated: !!auth.accessToken,
-  }
+  };
 
   return (
     <>
@@ -50,6 +60,7 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path={Path.Logout} element={<Logout />} />
         </Routes>
         <Footer />
       </AuthContext.Provider>

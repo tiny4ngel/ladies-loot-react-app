@@ -1,5 +1,6 @@
 const Path = {
     Home: '/',
+    Logout: '/logout',
  
 };
 
