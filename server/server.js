@@ -1348,7 +1348,7 @@
                 price: "100",
                 imgPath: "images/headset-main.png",
                 description:
-                    "Headset",
+                    "Introducing the Ladies Loot Gaming Headset, designed with the fierce spirit of female gamers in mind. This headset combines cutting-edge audio technology with a touch of elegance, delivering immersive sound quality that envelops you in every gaming moment. With noise-canceling microphones for crystal-clear communication, plush memory foam ear cushions for hours of comfort, and a stylish design that matches your gaming persona, the Ladies Loot Gaming Headset empowers you to conquer the gaming realm with precision and panache. Join the revolution and game on your terms with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "8f414b4f-a439-4d36-bedb-2ad695a9c830": {
@@ -1358,7 +1358,7 @@
                 price: "130",
                 imgPath: "images/keyboard-main.png",
                 description:
-                    "Keyboard",
+                    "Introducing the Ladies Loot Gaming Keyboard, designed with the fierce spirit of female gamers in mind. This keyboard combines cutting-edge technology with a touch of elegance, featuring customizable RGB backlighting that allows you to express your unique gaming style. With ultra-responsive mechanical switches, lightning-fast key actuation, and a comfortable ergonomic design, the Ladies Loot Gaming Keyboard empowers you to dominate the gaming world with precision and flair. Join the revolution and game on your terms with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "98539eab-ad2e-4642-a5c8-116264fb1fd2": {
@@ -1368,7 +1368,7 @@
                 price: "80",
                 imgPath: "images/mouse-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Gaming Mouse, designed with the fierce spirit of female gamers in mind. This mouse combines cutting-edge sensor technology with a touch of elegance, offering precision and responsiveness that elevate your gaming experience. With customizable RGB lighting that lets you express your unique style, programmable buttons for tailored gameplay, and an ergonomic design that ensures comfort during long gaming sessions, the Ladies Loot Gaming Mouse empowers you to conquer the gaming world with precision and flair. Join the revolution and game on your terms with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "985d9eab-ad2e-4626-a5c8-125231fb17k8": {
@@ -1378,7 +1378,7 @@
                 price: "110",
                 imgPath: "images/stand-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Gaming Headphone Stand, meticulously designed with the fierce spirit of female gamers in mind. This stand combines functionality with a touch of elegance, providing a secure and stylish resting place for your cherished gaming headphones. Crafted with premium materials, it not only showcases your headset but also keeps your gaming space organized. With a sleek, modern design that complements your gaming setup, the Ladies Loot Gaming Headphone Stand adds a touch of sophistication to your gaming environment. Elevate your gaming experience, keep your gear in top condition, and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "984d9eab-ac2e-4622-a5c8-1162k1fb1fd2": {
@@ -1388,7 +1388,7 @@
                 price: "110",
                 imgPath: "images/mic-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Gaming Microphone, meticulously designed with the fierce spirit of female gamers in mind. This microphone delivers crystal-clear audio quality and precision, ensuring that your voice commands and in-game communications are heard with utmost clarity. With adjustable settings for customized sound, a sleek and stylish design that complements your gaming setup, and easy plug-and-play functionality, the Ladies Loot Gaming Microphone enhances your gaming experience and elevates your streaming or recording endeavors. Step up your communication game and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
@@ -1398,7 +1398,7 @@
                 price: "400",
                 imgPath: "images/monitor-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Gaming Monitor, meticulously crafted with the fierce spirit of female gamers in mind. This monitor offers an immersive visual experience that transports you to the heart of your gaming worlds. With a cutting-edge display, ultra-smooth refresh rates, and vibrant colors, it ensures every detail comes to life. Its sleek and stylish design not only enhances your gaming setup but also complements your gaming persona. The Ladies Loot Gaming Monitor is your gateway to sharper graphics, faster response times, and a competitive edge. Elevate your gameplay and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             }
         },
@@ -1410,7 +1410,7 @@
                 price: "200",
                 imgPath: "images/chair-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Pink Gaming Chair, meticulously designed with the fierce spirit of female gamers in mind. This chair combines ergonomic comfort with a touch of elegance, providing the ultimate seating experience for long gaming sessions. With plush cushioning, adjustable armrests, and a stylish pink finish, it not only supports your body but also complements your gaming setup. The Ladies Loot Pink Gaming Chair is your throne of power, offering the support and style you deserve as you conquer virtual worlds with precision and flair. Level up your comfort and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "0a272k58-b7ea-4m09-a060-7ec488348f66": {
@@ -1420,7 +1420,7 @@
                 price: "900",
                 imgPath: "images/desk-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Pink Gaming Desk, meticulously designed with the fierce spirit of female gamers in mind. This desk combines functionality with a touch of elegance, providing a spacious and organized gaming workspace that reflects your unique style. Crafted with a sleek pink finish, it not only enhances your gaming setup but also complements your gaming persona. With features like cable management, ample surface area, and durability to withstand hours of gaming, the Ladies Loot Pink Gaming Desk is your ultimate command center. Elevate your gaming experience, stay organized, and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "0a272k58-b7ea-4m09-a000-7ec484748l66": {
@@ -1430,7 +1430,7 @@
                 price: "300",
                 imgPath: "images/bunny-chair.png",
                 description:
-                    "Kuromi",
+                    "ntroducing the Ladies Loot Bunny Ears Gaming Chair, meticulously designed with the fierce spirit of female gamers in mind. This chair offers an enchanting fusion of ergonomic comfort and whimsical style, making it the perfect addition to your gaming sanctuary. With its bunny ear design, it adds a touch of playful charm to your setup, setting you apart from the rest. Crafted with plush cushioning, adjustable features, and a distinctive bunny ear headrest, it not only supports your body but also showcases your unique gaming personality. The Ladies Loot Bunny Ears Gaming Chair is your throne of choice, offering both comfort and character as you conquer virtual realms with precision and flair. Elevate your gaming experience, embrace your inner bunny, and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "0a272k58-b7ea-4m99-a000-7ed484748l66": {
@@ -1440,7 +1440,7 @@
                 price: "300",
                 imgPath: "images/station.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Gaming Station, meticulously designed with the fierce spirit of female gamers in mind. This gaming station offers an all-in-one solution to elevate your gaming experience. With a sleek and functional design, it provides a dedicated space for all your gaming gear, from your PC or console to your peripherals and collectibles. Crafted with premium materials and thoughtful features like cable management and RGB lighting, it not only enhances your gaming setup but also showcases your unique style. The Ladies Loot Gaming Station is your command center, offering organization and aesthetics as you dominate virtual realms with precision and flair. Elevate your gaming experience, keep everything in one place, and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "0a272k58-b7ea-4m09-a000-7ed484748l66": {
@@ -1450,7 +1450,7 @@
                 price: "300",
                 imgPath: "images/pillow-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Gaming Chair Pillow, meticulously designed with the fierce spirit of female gamers in mind. This pillow offers an extra layer of comfort and support to enhance your gaming experience. Crafted with plush memory foam and a stylish design, it not only enhances the ergonomics of your gaming chair but also complements your gaming setup. With its soft and supportive padding, the Ladies Loot Gaming Chair Pillow ensures you stay comfortable during extended gaming sessions. Elevate your seating comfort, reduce fatigue, and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             }
         },
@@ -1463,7 +1463,7 @@
                 price: "20",
                 imgPath: "images/accessori-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Kuromi Action Figure, meticulously crafted with the unique and edgy style of Kuromi enthusiasts in mind. This action figure brings the mischievous charm of Kuromi to life with exceptional attention to detail. With its poseable limbs and intricate design, it captures every aspect of Kuromi's personality and allure. Crafted with high-quality materials, it not only serves as a collector's item but also as a striking addition to your room decor. The Ladies Loot Kuromi Action Figure is a must-have for fans and collectors alike, allowing you to display your love for this iconic character with precision and flair. Elevate your Kuromi collection and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "0h272m58-j7ea-4m69-a900-7ed484748l66": {
@@ -1473,7 +1473,7 @@
                 price: "30",
                 imgPath: "images/plushie.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Joystick Plushie, meticulously designed with the nostalgia and charm of classic gaming in mind. This plushie captures the essence of a joystick controller with remarkable attention to detail. With its soft and huggable construction, it brings a touch of comfort and whimsy to your gaming space. Crafted with premium materials, it not only serves as a delightful addition to your gaming decor but also as a cuddly companion for gamers of all ages. The Ladies Loot Joystick Plushie is a must-have for gaming enthusiasts, allowing you to embrace your love for gaming with precision and flair. Elevate your gaming nostalgia and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "7h272f58-j7ea-4m69-a900-7ed488748l66": {
@@ -1483,7 +1483,7 @@
                 price: "20",
                 imgPath: "images/mousepad.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Kawaii Mousepad, meticulously designed with the adorable and playful spirit of kawaii culture in mind. This mousepad adds a delightful touch of cuteness to your gaming or work setup. With its vibrant and charming design featuring cute characters and vibrant colors, it brings a smile to your face every time you use it. Crafted with a smooth, high-quality surface for precise mouse control and a non-slip base, it not only enhances your productivity but also complements your workspace. The Ladies Loot Kawaii Mousepad is a must-have for those who adore kawaii aesthetics, allowing you to infuse your workspace with a touch of sweetness and style. Elevate your mousepad game and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "7h272f58-j7ea-4m69-a960-7ed408748l66": {
@@ -1493,7 +1493,7 @@
                 price: "10",
                 imgPath: "images/poster.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Jinx Poster, meticulously designed to showcase the chaotic and charismatic character from League of Legends. This poster captures the essence of Jinx's rebellious and explosive personality with stunning artistry and attention to detail. With vibrant colors and dynamic imagery, it brings the manic energy of Jinx to life, making it a captivating addition to your gaming room or wall decor. Crafted with high-quality materials and vivid printing, it not only celebrates your love for the character but also adds a bold statement to your space. The Ladies Loot Jinx Poster is a must-have for League of Legends fans, allowing you to display your passion for the game with precision and flair. Elevate your wall decor and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "7h272f58-j7ea-4t59-a960-7ed408748l66": {
@@ -1503,7 +1503,7 @@
                 price: "15",
                 imgPath: "images/keychain-set.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Valorant Weapons Keychains, meticulously designed to celebrate your passion for the tactical first-person shooter game, Valorant. These keychains bring the iconic weapons from the game to life in miniature form, with exceptional attention to detail. Crafted with high-quality materials, they not only serve as functional keychains but also as collector's items and stylish accessories. Each keychain features the distinct design of a Valorant weapon, allowing you to showcase your love for the game and your favorite firearms with precision and flair. The Ladies Loot Valorant Weapons Keychains are a must-have for Valorant enthusiasts, elevating your everyday carry and joining the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             }
         },
@@ -1515,7 +1515,7 @@
                 price: "150",
                 imgPath: "images/gadget-main.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot LED Triangles, meticulously designed to illuminate your gaming setup with a futuristic and stylish touch. These LED triangles bring a captivating and dynamic lighting element to your environment. Crafted with cutting-edge technology and customizable RGB lighting, they allow you to create mesmerizing light displays that match your gaming mood and style. With their sleek and geometric design, they not only enhance your gaming ambiance but also serve as eye-catching decor pieces. The Ladies Loot LED Triangles are a must-have for gamers and enthusiasts looking to elevate their setup with precision and flair. Illuminate your gaming space and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "1240599d-f0k0-497e-ac99-eb7f703413d7": {
@@ -1525,7 +1525,7 @@
                 price: "100",
                 imgPath: "images/speaker.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Smart Speaker with App Connectivity, meticulously designed to revolutionize your audio experience. This speaker seamlessly integrates with your favorite apps and devices to bring music, podcasts, and entertainment to life like never before. With a sleek and modern design, it complements any room decor while delivering exceptional sound quality. Crafted with advanced technology and easy-to-use app control, it allows you to customize your audio settings, create playlists, and enjoy a personalized audio journey. The Ladies Loot Smart Speaker with App Connectivity is a must-have for tech-savvy audiophiles, offering a new level of convenience and immersion to your listening experience. Elevate your sound and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "1240599d-f0k0-497e-ac49-eb7f703413d7": {
@@ -1535,7 +1535,7 @@
                 price: "150",
                 imgPath: "images/joystick.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Pink Joystick, meticulously designed with a blend of sophistication and playfulness. This joystick stands out with its eye-catching pink finish, adding a touch of elegance to your gaming setup. Crafted with precision controls and ergonomic design, it ensures a comfortable and responsive gaming experience. Whether you're navigating virtual worlds or conquering your favorite games, the Ladies Loot Pink Joystick offers precise control and style in one package. Elevate your gaming experience and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "1240599d-f0u0-497e-ak94-eb7f703413d7": {
@@ -1545,7 +1545,7 @@
                 price: "40",
                 imgPath: "images/led.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot LED Lights, meticulously designed to transform your space with vibrant and dynamic illumination. These LED lights offer endless possibilities for creating stunning lighting displays in your gaming room, workspace, or any environment. With customizable RGB colors, remote control, and various lighting modes, they allow you to set the mood, match your style, and enhance your atmosphere. Crafted with energy-efficient technology and easy installation, they not only elevate your lighting ambiance but also add a touch of modern sophistication to your decor. The Ladies Loot LED Lights are a must-have for those seeking to personalize their space with precision and flair. Illuminate your surroundings and join the revolution with Ladies Loot.",
                 _createdOn: 1613551279012
             },
             "1240599d-f0u0-497e-ak84-eb7f776413d7": {
@@ -1555,7 +1555,7 @@
                 price: "50",
                 imgPath: "images/sign.png",
                 description:
-                    "Kuromi",
+                    "Introducing the Ladies Loot Kawaii LED Sign, meticulously designed to infuse your space with adorable and enchanting charm. This LED sign features a delightful kawaii design that adds a touch of cuteness and whimsy to your room. Crafted with high-quality materials and customizable lighting, it allows you to create a warm and inviting atmosphere with ease. Whether you're using it to decorate your gaming area, bedroom, or workspace, the Ladies Loot Kawaii LED Sign is the perfect addition to showcase your love for all things cute and kawaii. Elevate your decor and join the revolution with Ladies Loot, where style meets charm.",
                 _createdOn: 1613551279012
             }
 

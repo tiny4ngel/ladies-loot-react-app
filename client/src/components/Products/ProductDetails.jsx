@@ -14,6 +14,7 @@ const ProductDetails = () => {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
+                console.log("Fetched product image path:", data.imgPath); // Log the image path
                 setProduct(data);
             } catch (error) {
                 console.error('Error fetching product:', error);
@@ -30,7 +31,7 @@ const ProductDetails = () => {
     return (
         <div className="product-detail-page">
             <div className="product-image-wrapper">
-                <img src={product.imgPath} alt={product.name} className="product-image" />
+                <img src={`/${product.imgPath}`} alt={product.name} className="product-image" />
             </div>
             <div className="product-details-wrapper">
                 <h1 className="product-title">{product.name}</h1>
