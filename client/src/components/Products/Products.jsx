@@ -7,7 +7,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3030/data/peripherals'); // Update with your API endpoint
+        const response = await fetch('http://localhost:3030/data/peripherals');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -49,7 +49,7 @@ const Products = () => {
         {productsList.map((product, index) => (
           <div className="item" key={index}>
             <div className="product-image-container">
-              <img src={product.photoPath} alt={product.altText} />
+              <img src={product.imgPath} alt={product.altText} />
             </div>
             <div className="product-details">
               <span className="product-name">{product.name}</span>
