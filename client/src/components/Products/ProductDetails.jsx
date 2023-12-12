@@ -14,7 +14,7 @@ const ProductDetails = () => {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                console.log("Fetched product image path:", data.imgPath); // Log the image path
+                console.log("Fetched product image path:", data.imgPath);
                 setProduct(data);
             } catch (error) {
                 console.error('Error fetching product:', error);
@@ -37,7 +37,7 @@ const ProductDetails = () => {
                 <h1 className="product-title">{product.name}</h1>
                 <p className="product-category">{product.category}</p>
                 <p className="product-price">${product.price}</p>
-                {/* Implement rating system if needed */}
+                {/* Implement rating system*/}
                 <p className="product-description">{product.description}</p>
                 <button className="btn add-to-cart">Add to Cart</button>
                 <button className="btn add-to-wishlist">Wishlist</button>

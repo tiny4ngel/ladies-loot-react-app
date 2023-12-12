@@ -45,6 +45,7 @@ const Products = () => {
 
 
   return (
+    
     <div className="products" style={{ marginTop: '150px' }}>
       {productItems.map((item, index) => (
         <div className="product-item" key={index}>
@@ -57,17 +58,14 @@ const Products = () => {
         </div>
       ))}
 
-      <div className="search-container">
-        <input type="text" placeholder="Search Product" className="search-input" />
-        <button className="search-button">🔍</button>
-      </div>
-
       <div className="products-container">
         {displayProducts && displayProducts.map((product, index) => (
           <div className="item" key={index}>
+            <Link to={`/products/${product.category}/${product._id}`}>
             <div className="product-image-container">
               <img src={product.imgPath} alt={product.altText} />
             </div>
+            </Link>
             <div className="product-details">
               <span className="product-name">{product.name}</span>
               <p className="product-price">{product.price}$</p>
