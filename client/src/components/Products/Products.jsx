@@ -53,7 +53,7 @@ const Products = () => {
             </div>
             <div className="product-details">
               <span className="product-name">{product.name}</span>
-              <p className="product-price">{product.price}</p>
+              <p className="product-price">{product.price}$</p>
               <div className="product-actions">
                 <button className="wishlist-btn">♥</button>
                 <button className="cart-btn">🛒</button>
