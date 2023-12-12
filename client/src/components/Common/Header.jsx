@@ -15,6 +15,7 @@ export default function Header() {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
+          <Link to="/add-product">Add Products</Link>
           {isAuthenticated &&(
             <>
             <Link to="#">Community</Link>

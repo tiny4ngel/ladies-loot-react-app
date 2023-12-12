@@ -12,11 +12,16 @@ import Products from './components/Products/Products';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Logout from './components/Logout/Logout';
+import AddPeripheral from './components/AddProductForm/AddPeripheral'
 
 
 function App() {
   const navigate = useNavigate();
-  const [auth, setAuth] = useState({});
+  const [auth, setAuth] = useState(() => {
+    localStorage.removeItem('accessToken');
+
+    return {};
+  });
 
   const loginSubmitHandler = async (values) => {
     const result = await authService.login(values.email, values.password);
@@ -58,6 +63,7 @@ function App() {
         <Routes>
           <Route path={Path.Home} element={<Home />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/add-product' element={<AddPeripheral />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path={Path.Logout} element={<Logout />} />

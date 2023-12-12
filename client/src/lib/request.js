@@ -34,6 +34,7 @@ const request = async (method, url, data) => {
     if(response.ok && result.accessToken){
         localStorage.setItem('accessToken', result.accessToken);
     }
+    
     else if (!response.ok) {
         if (response.status === 403) {
             localStorage.removeItem('accessToken');
