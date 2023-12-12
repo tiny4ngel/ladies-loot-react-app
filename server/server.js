@@ -1461,7 +1461,7 @@
                 name: "LL Kuromi",
                 category: "Accessories",
                 price: "20",
-                imgPath: "images/accessori.png",
+                imgPath: "images/accessori-main.png",
                 description:
                     "Kuromi",
                 _createdOn: 1613551279012
