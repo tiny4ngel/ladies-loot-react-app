@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../../public/styles/products.css'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faHeart, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 const Products = () => {
@@ -14,7 +18,7 @@ const Products = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setProductsList(prev => ({ ...prev, [category]: data }));
+        setProductsList(prev => ({ ...prev, [category]: data.map(product => ({ ...product, category })) }));
       } catch (error) {
         console.error(`Error fetching ${category} products:`, error);
       }
@@ -30,9 +34,9 @@ const Products = () => {
 
   const productItems = [
     { category: 'peripherals', buttonText: 'PERIPHERALS', imageSrc: 'images/keyboard-main.png' },
-    { category: 'furniture', buttonText: 'FURNITURE',  imageSrc: 'images/chair-main.png' },
+    { category: 'furniture', buttonText: 'FURNITURE', imageSrc: 'images/chair-main.png' },
     { category: 'accessories', buttonText: 'ACCESSORIES', imageSrc: 'images/accessori-main.png' },
-    { category: 'tech', buttonText: 'TECH GADGETS',  imageSrc: 'images/gadget-main.png' },
+    { category: 'tech', buttonText: 'TECH GADGETS', imageSrc: 'images/gadget-main.png' },
   ];
 
   const displayProducts = activeCategory === 'all'
@@ -59,7 +63,7 @@ const Products = () => {
       </div>
 
       <div className="products-container">
-      {displayProducts && displayProducts.map((product, index) => (
+        {displayProducts && displayProducts.map((product, index) => (
           <div className="item" key={index}>
             <div className="product-image-container">
               <img src={product.imgPath} alt={product.altText} />
@@ -68,8 +72,17 @@ const Products = () => {
               <span className="product-name">{product.name}</span>
               <p className="product-price">{product.price}$</p>
               <div className="product-actions">
-                <button className="wishlist-btn">♥</button>
-                <button className="cart-btn">🛒</button>
+                <Link to={`/products/${product.category}/${product._id}`}>
+                  <button className="details-btn">
+                    <FontAwesomeIcon icon={faInfoCircle} /><h5>Details</h5>
+                  </button>
+                </Link>
+                <button className="details-btn">
+                  <FontAwesomeIcon icon={faHeart} /><h5>Wishlist</h5>
+                </button>
+                <button className="details-btn">
+                  <FontAwesomeIcon icon={faShoppingCart} /><h5>Cart</h5>
+                </button>
               </div>
             </div>
           </div>

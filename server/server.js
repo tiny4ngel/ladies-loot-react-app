@@ -1448,7 +1448,7 @@
                 name: "LL Pillow",
                 category: "Furniture",
                 price: "300",
-                imgPath: "images/pillow-chair.png",
+                imgPath: "images/pillow-main.png",
                 description:
                     "Kuromi",
                 _createdOn: 1613551279012
