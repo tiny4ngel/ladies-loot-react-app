@@ -4,7 +4,7 @@ import useForm from "../../hooks/useForm";
 
 const RegisterFormKeys = {
     Email: 'email',
-    Username: 'email',
+    Username: 'username',
     Password: 'password',
     ConfirmPassword: 'confirm-password',
 };
@@ -62,10 +62,10 @@ export default function Register() {
                             placeholder="🔑 Confrirm Password"
                             onChange={onChange}
                             values={values[RegisterFormKeys.ConfirmPassword]}
-                        />
+                        />                    
                     </div>
                     <div class="input-group">
-                        <button type="submit">LOGIN</button>
+                        <button type="submit">Sign up</button>
                     </div>
                 </form>
                 <div class="sign-up-text">

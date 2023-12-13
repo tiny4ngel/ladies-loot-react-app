@@ -19,6 +19,7 @@ export default function Header() {
             <>
             <Link to="#">Community</Link>
             <Link to="#">Support</Link>
+            <Link to="/account">Acount</Link>
             <Link to="/logout">Logout</Link>
             </>
           )}
