@@ -17,9 +17,8 @@ export default function Header() {
           <Link to="/products">Products</Link>
           {isAuthenticated &&(
             <>
-            <Link to="#">Community</Link>
-            <Link to="#">Support</Link>
             <Link to="/account">Account</Link>
+            <Link to="/wishlist">Wishlist</Link>
             <Link to="/logout">Logout</Link>
             </>
           )}

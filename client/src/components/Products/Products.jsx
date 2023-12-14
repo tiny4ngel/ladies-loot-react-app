@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../../../public/styles/products.css'
 
@@ -32,6 +32,8 @@ const Products = () => {
     setActiveCategory(category);
   };
 
+
+
   const productItems = [
     { category: 'peripherals', buttonText: 'PERIPHERALS', imageSrc: 'images/keyboard-main.png' },
     { category: 'furniture', buttonText: 'FURNITURE', imageSrc: 'images/chair-main.png' },
@@ -45,7 +47,7 @@ const Products = () => {
 
 
   return (
-    
+
     <div className="products" style={{ marginTop: '150px' }}>
       {productItems.map((item, index) => (
         <div className="product-item" key={index}>
@@ -62,9 +64,9 @@ const Products = () => {
         {displayProducts && displayProducts.map((product, index) => (
           <div className="item" key={index}>
             <Link to={`/products/${product.category}/${product._id}`}>
-            <div className="product-image-container">
-              <img src={product.imgPath} alt={product.altText} />
-            </div>
+              <div className="product-image-container">
+                <img src={product.imgPath} alt={product.altText} />
+              </div>
             </Link>
             <div className="product-details">
               <span className="product-name">{product.name}</span>

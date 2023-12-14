@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
 import AuthContext from '../../contexts/authContext';
 import '../../../public/styles/user-profile.css';
+import * as billingService from '../../services/billingService';
 
 
 const AccountInformation = () => {
-    const token = localStorage.getItem('accessToken');
-    const { email, isAuthenticated, userId, billInfoId } = useContext(AuthContext);
+    const { isAuthenticated } = useContext(AuthContext);
     const [billingInfo, setBillingInfo] = useState({
         email: '',
         phone: '',
@@ -14,36 +14,26 @@ const AccountInformation = () => {
         zip: ''
     });
 
-    const fetchBillingDetails = async () => {
-        try {
-            const response = await fetch(`http://localhost:3030/data/billingInfo/${billInfoId}`, {
-                headers: { 'X-Authorization': token }
-            });
-            if (!response.ok) {
-                throw new Error('Failed to fetch billing information');
-            }
-            const data = await response.json();
-            console.log("Fetched data:", data);
-            if (data && data.email !== undefined) {
-                setBillingInfo(data);
-            } else {
-                console.error('Unexpected data structure:', data);
-            }
-
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
-
     useEffect(() => {
         if (!isAuthenticated) {
-           
-            return;
+            return; 
         }
 
-        fetchBillingDetails();
+        const billingId = localStorage.getItem('billInfoId');
 
-    }, [token, isAuthenticated, userId, email]);
+        if (billingId) {
+            billingService.getOne(billingId)
+                .then(setBillingInfo)
+                .catch(console.error);
+        } else {
+            billingService.create({ email: '', phone: '', city: '', address: '', zip: '' })
+                .then(data => {
+                    localStorage.setItem('billInfoId', data._id);
+                    setBillingInfo(data);
+                })
+                .catch(console.error);
+        }
+    }, [isAuthenticated]);
 
     const handleChange = (e) => {
         setBillingInfo({ ...billingInfo, [e.target.name]: e.target.value });
@@ -51,24 +41,10 @@ const AccountInformation = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const endpoint = `http://localhost:3030/data/billingInfo/${billInfoId}`;
-
         try {
-            const response = await fetch(endpoint, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Authorization': token
-                },
-                body: JSON.stringify(billingInfo)
-            });
-            if (!response.ok) {
-                throw new Error('Failed to update billing information');
-            }
-            const updatedData = await response.json();
-            console.log('Updated billing info:', updatedData);
-            setBillingInfo(updatedData); 
-
+            const billingId = localStorage.getItem('billInfoId');
+            const updatedData = await billingService.edit(billingId, billingInfo);
+            setBillingInfo(updatedData);
         } catch (error) {
             console.error('Error:', error);
         }

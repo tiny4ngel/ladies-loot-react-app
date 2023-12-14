@@ -14,7 +14,7 @@ import Register from './components/Register/Register';
 import Logout from './components/Logout/Logout';
 import ProductDetails from './components/Products/ProductDetails';
 import AccountInformation from './components/AccountInformation/AccountInformation';
-
+import { getMyBillingInfo } from './services/billingService';
 
 function App() {
   const navigate = useNavigate();
@@ -31,11 +31,24 @@ function App() {
 
   const loginSubmitHandler = async (values) => {
     const result = await authService.login(values.email, values.password);
+    const billingInfo = await getMyBillingInfo(result._id);
 
     if (result.accessToken) {
       localStorage.setItem('accessToken', result.accessToken);
-      localStorage.setItem('userId', result._id); 
+      localStorage.setItem('userId', result._id);
       setAuth({ ...result, userId: result._id, isAuthenticated: true });
+      localStorage.setItem('userId', result._id);
+      try {
+        const billingInfo = await getMyBillingInfo(result._id);
+
+        if (billingInfo) {
+          localStorage.setItem('billInfoId', billingInfo._id);
+        } 
+
+      } catch (error) {
+        console.error('Error fetching billing information:', error);
+      }
+
       navigate(Path.Home);
     }
 
@@ -47,42 +60,15 @@ function App() {
 
     if (result.accessToken) {
       localStorage.setItem('accessToken', result.accessToken);
-      localStorage.setItem('userId', result._id);
+      localStorage.setItem('userId', result._id); 
       setAuth({ ...result, userId: result._id, isAuthenticated: true });
       navigate(Path.Home);
+    } else {
+      // Handle registration failure, show error message, etc.
+      console.error('Registration failed');
     }
-    try {
-      const billingInfoResponse = await fetch('http://localhost:3030/data/billingInfo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Authorization': result.accessToken
-        },
-        body: JSON.stringify({
-          email: '',
-          phone: '',
-          city: '',
-          address: '',
-          zip: ''
-        })
-      });
-
-      if (!billingInfoResponse.ok) {
-        throw new Error('Failed to create billing information');
-      }
-
-      const billingInfoData = await billingInfoResponse.json();
-      console.log('Billing information created:', billingInfoData);
-      localStorage.setItem('billInfoId', billingInfoData._id);
-      setAuth(prevState => ({
-        ...prevState,
-        billInfoId: billingInfoData._id, 
-      }));
-    } catch (error) {
-      console.error('Error creating billing information:', error);
-    }
-    navigate(Path.Home)
   };
+
 
   const logoutHandler = () => {
     localStorage.removeItem('accessToken');

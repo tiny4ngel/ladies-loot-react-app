@@ -138,6 +138,18 @@ body {
   .cart-btn:hover {
     color: #f292cf; 
   }
+
+  .wishlist-message {
+    position: fixed;
+    top: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    z-index: 1000; /* to ensure it's above other elements */
+  }
   
   @media (max-width: 1200px) {
     .products-container {
