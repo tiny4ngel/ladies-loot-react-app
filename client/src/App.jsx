@@ -16,6 +16,7 @@ import ProductDetails from './components/Products/ProductDetails';
 import AccountInformation from './components/AccountInformation/AccountInformation';
 import { getMyBillingInfo } from './services/billingService';
 import Wishlist from './components/Wishlist/Wishlist';
+import Cart from './components/Cart/Cart';
 
 function App() {
   const navigate = useNavigate();
@@ -99,6 +100,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/account' element={<AccountInformation />} />
           <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/cart' element={<Cart />} />
           <Route path={Path.Logout} element={<Logout />} />
         </Routes>
         <Footer />

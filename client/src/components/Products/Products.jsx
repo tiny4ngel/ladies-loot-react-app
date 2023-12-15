@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import AuthContext from '../../contexts/authContext';
 import * as wishlistService from '../../services/wishlistService';
+import * as cartService from '../../services/cartService';
 import { Link } from 'react-router-dom';
 import '../../../public/styles/products.css'
 
@@ -49,6 +50,22 @@ const Products = () => {
       console.error('Error adding product to wishlist:', error);
     }
   };
+
+  const handleAddToCart = async (productId, category) => {
+    try {
+      const product = findProductInList(productId);
+      if (!product) {
+        console.error('Product not found:', productId);
+        return;
+      }
+
+      await cartService.addToCart(userId, product._id, 1, category); // Include category here
+      console.log('Product added to cart', userId, product._id);
+    } catch (error) {
+      console.error('Error adding product to cart:', error);
+    }
+  };
+
 
   const findProductInList = (productId) => {
     const allProducts = Object.values(productsList).flat();
@@ -101,7 +118,7 @@ const Products = () => {
                 <button className="details-btn" onClick={() => handleAddToWishlist(product._id, product.category)}>
                   <FontAwesomeIcon icon={faHeart} /><h5>Wishlist</h5>
                 </button>
-                <button className="details-btn">
+                <button className="details-btn" onClick={() => handleAddToCart(product._id, product.category)}>
                   <FontAwesomeIcon icon={faShoppingCart} /><h5>Cart</h5>
                 </button>
               </div>

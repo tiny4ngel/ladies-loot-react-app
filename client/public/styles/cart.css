@@ -1,0 +1,121 @@
+.container {
+    margin-top: 40px; 
+}
+
+.cart-page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(-180deg, #ffd1fc 0%, #fad0c6 100%);
+}
+
+.cart-table {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table-header, .cart-table-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr 1fr;
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar {
+    background-color: #89678f; 
+    padding: 30px;
+    box-sizing: border-box;
+    width: 350px; 
+}
+
+.sidebar-item {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.cart-table-header {
+    background-color: #f292cf;
+    color: white;
+    font-weight: bold;
+}
+
+.cart-table-row {
+    border-bottom: 1px solid #eee;
+}
+
+.row-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-item img {
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px;
+}
+
+.quantity-selector button {
+    background-color: #f292cf;
+    color: white;
+    border: none;
+    margin: 0 5px;
+}
+
+.quantity-selector input {
+    width: 50px;
+    text-align: center;
+}
+
+.order-summary {
+    width: 25%;
+    background-color: #f292cf;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #f292cf;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkout-button:hover {
+    background-color: #fcb0d9;
+}
+
+@media (max-width: 768px) {
+    .cart-page-container {
+        flex-direction: column;
+    }
+
+    .order-summary {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
