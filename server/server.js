@@ -1344,7 +1344,7 @@
             "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Headset",
-                category: "Peripherals",
+                category: "peripherals",
                 price: "100",
                 imgPath: "images/headset-main.png",
                 description:
@@ -1354,7 +1354,7 @@
             "8f414b4f-a439-4d36-bedb-2ad695a9c830": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Keyboard",
-                category: "Peripherals",
+                category: "peripherals",
                 price: "130",
                 imgPath: "images/keyboard-main.png",
                 description:
@@ -1364,7 +1364,7 @@
             "98539eab-ad2e-4642-a5c8-116264fb1fd2": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Mouse",
-                category: "Peripherals",
+                category: "peripherals",
                 price: "80",
                 imgPath: "images/mouse-main.png",
                 description:
@@ -1374,7 +1374,7 @@
             "985d9eab-ad2e-4626-a5c8-125231fb17k8": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Stand",
-                category: "Peripherals",
+                category: "peripherals",
                 price: "110",
                 imgPath: "images/stand-main.png",
                 description:
@@ -1384,7 +1384,7 @@
             "984d9eab-ac2e-4622-a5c8-1162k1fb1fd2": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Mic",
-                category: "Peripherals",
+                category: "peripherals",
                 price: "110",
                 imgPath: "images/mic-main.png",
                 description:
@@ -1394,7 +1394,7 @@
             "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Monitor",
-                category: "Peripherals",
+                category: "peripherals",
                 price: "400",
                 imgPath: "images/monitor-main.png",
                 description:
@@ -1406,7 +1406,7 @@
             "0a272c58-b7ea-4e09-a000-7ec988248f66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Chair",
-                category: "Furniture",
+                category: "furniture",
                 price: "200",
                 imgPath: "images/chair-main.png",
                 description:
@@ -1416,7 +1416,7 @@
             "0a272k58-b7ea-4m09-a060-7ec488348f66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Desk",
-                category: "Furniture",
+                category: "furniture",
                 price: "900",
                 imgPath: "images/desk-main.png",
                 description:
@@ -1426,7 +1426,7 @@
             "0a272k58-b7ea-4m09-a000-7ec484748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Bunny",
-                category: "Furniture",
+                category: "furniture",
                 price: "300",
                 imgPath: "images/bunny-chair.png",
                 description:
@@ -1436,7 +1436,7 @@
             "0a272k58-b7ea-4m99-a000-7ed484748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Station",
-                category: "Furniture",
+                category: "furniture",
                 price: "300",
                 imgPath: "images/station.png",
                 description:
@@ -1446,7 +1446,7 @@
             "0a272k58-b7ea-4m09-a000-7ed484748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Pillow",
-                category: "Furniture",
+                category: "furniture",
                 price: "300",
                 imgPath: "images/pillow-main.png",
                 description:
@@ -1459,7 +1459,7 @@
             "0h272m58-b7ea-4m99-a000-7ed484748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Kuromi",
-                category: "Accessories",
+                category: "accessories",
                 price: "20",
                 imgPath: "images/accessori-main.png",
                 description:
@@ -1469,7 +1469,7 @@
             "0h272m58-j7ea-4m69-a900-7ed484748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Plushie",
-                category: "Accessories",
+                category: "accessories",
                 price: "30",
                 imgPath: "images/plushie.png",
                 description:
@@ -1479,7 +1479,7 @@
             "7h272f58-j7ea-4m69-a900-7ed488748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Mousepad",
-                category: "Accessories",
+                category: "accessories",
                 price: "20",
                 imgPath: "images/mousepad.png",
                 description:
@@ -1489,7 +1489,7 @@
             "7h272f58-j7ea-4m69-a960-7ed408748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Poster",
-                category: "Accessories",
+                category: "accessories",
                 price: "10",
                 imgPath: "images/poster.png",
                 description:
@@ -1499,7 +1499,7 @@
             "7h272f58-j7ea-4t59-a960-7ed408748l66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Keychains",
-                category: "Accessories",
+                category: "accessories",
                 price: "15",
                 imgPath: "images/keychain-set.png",
                 description:
@@ -1511,7 +1511,7 @@
             "1240599d-f0k0-497e-ac99-eb8f703713d7": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "Led Triangles",
-                category: "Tech-Gadgets",
+                category: "tech",
                 price: "150",
                 imgPath: "images/gadget-main.png",
                 description:
@@ -1521,7 +1521,7 @@
             "1240599d-f0k0-497e-ac99-eb7f703413d7": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Speaker",
-                category: "Tech-Gadgets",
+                category: "tech",
                 price: "100",
                 imgPath: "images/speaker.png",
                 description:
@@ -1531,7 +1531,7 @@
             "1240599d-f0k0-497e-ac49-eb7f703413d7": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "LL Joystick",
-                category: "Tech-Gadgets",
+                category: "tech",
                 price: "150",
                 imgPath: "images/joystick.png",
                 description:
@@ -1541,7 +1541,7 @@
             "1240599d-f0u0-497e-ak94-eb7f703413d7": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "Led Lights",
-                category: "Tech-Gadgets",
+                category: "tech",
                 price: "40",
                 imgPath: "images/led.png",
                 description:
@@ -1551,7 +1551,7 @@
             "1240599d-f0u0-497e-ak84-eb7f776413d7": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 name: "Led Sign",
-                category: "Tech-Gadgets",
+                category: "tech",
                 price: "50",
                 imgPath: "images/sign.png",
                 description:

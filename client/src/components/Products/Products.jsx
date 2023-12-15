@@ -1,4 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
+import AuthContext from '../../contexts/authContext';
+import * as wishlistService from '../../services/wishlistService';
 import { Link } from 'react-router-dom';
 import '../../../public/styles/products.css'
 
@@ -9,6 +11,7 @@ import { faShoppingCart, faHeart, faInfoCircle } from '@fortawesome/free-solid-s
 const Products = () => {
   const [productsList, setProductsList] = useState({});
   const [activeCategory, setActiveCategory] = useState('all');
+  const { userId } = useContext(AuthContext);
 
   useEffect(() => {
     const fetchProducts = async (category) => {
@@ -23,7 +26,6 @@ const Products = () => {
         console.error(`Error fetching ${category} products:`, error);
       }
     };
-
     const categories = ['peripherals', 'furniture', 'accessories', 'tech'];
     categories.forEach(category => fetchProducts(category));
   }, []);
@@ -33,6 +35,25 @@ const Products = () => {
   };
 
 
+  const handleAddToWishlist = async (productId, category) => {
+    try {
+      const product = findProductInList(productId);
+      if (!product) {
+        console.error('Product not found:', productId);
+        return;
+      }
+
+      await wishlistService.addToWishlist(userId, product._id, category);
+      console.log('Product added to wishlist', userId, product._id, category);
+    } catch (error) {
+      console.error('Error adding product to wishlist:', error);
+    }
+  };
+
+  const findProductInList = (productId) => {
+    const allProducts = Object.values(productsList).flat();
+    return allProducts.find(product => product._id === productId);
+  };
 
   const productItems = [
     { category: 'peripherals', buttonText: 'PERIPHERALS', imageSrc: 'images/keyboard-main.png' },
@@ -77,7 +98,7 @@ const Products = () => {
                     <FontAwesomeIcon icon={faInfoCircle} /><h5>Details</h5>
                   </button>
                 </Link>
-                <button className="details-btn">
+                <button className="details-btn" onClick={() => handleAddToWishlist(product._id, product.category)}>
                   <FontAwesomeIcon icon={faHeart} /><h5>Wishlist</h5>
                 </button>
                 <button className="details-btn">
