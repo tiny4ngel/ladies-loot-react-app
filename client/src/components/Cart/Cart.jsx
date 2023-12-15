@@ -66,8 +66,16 @@ const Cart = () => {
         return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
     };
 
+    if (cartItems.length === 0) {
+        return (
+            <div className="container empty-cart">
+                <h2>Your cart is empty</h2>
+            </div>
+        );
+    }
     return (
         <div className="container">
+            {/* <h1 className='cart-text'>Your Cart</h1> */}
             <div className="cart-page-container">
                 <div className="cart-table">
                     {/* Cart Table Header */}
@@ -96,7 +104,7 @@ const Cart = () => {
                     ))}
                 </div>
 
-                <aside className="sidebar">
+                <aside className="sidebar-cart">
                     <h3>ORDER SUMMARY</h3>
                     <div className="summary-row">Subtotal: ${calculateSubtotal()}</div>
                     <div className="summary-row">Shipping: FREE</div>

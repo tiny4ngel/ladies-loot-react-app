@@ -4,6 +4,7 @@ import { useState } from 'react';
 import * as authService from './services/authService';
 import AuthContext from './contexts/authContext';
 import Path from './paths';
+import { Toaster } from 'react-hot-toast';
 
 import Header from './components/Common/Header';
 import Footer from './components/Common/Footer';
@@ -45,7 +46,7 @@ function App() {
 
         if (billingInfo) {
           localStorage.setItem('billInfoId', billingInfo._id);
-        } 
+        }
 
       } catch (error) {
         console.error('Error fetching billing information:', error);
@@ -62,7 +63,7 @@ function App() {
 
     if (result.accessToken) {
       localStorage.setItem('accessToken', result.accessToken);
-      localStorage.setItem('userId', result._id); 
+      localStorage.setItem('userId', result._id);
       setAuth({ ...result, userId: result._id, isAuthenticated: true });
       navigate(Path.Home);
     } else {
@@ -92,6 +93,13 @@ function App() {
     <>
       <AuthContext.Provider value={values}>
         <Header />
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          containerStyle={{
+            marginTop: '100px' // or however much margin you want
+          }}
+        />
         <Routes>
           <Route path={Path.Home} element={<Home />} />
           <Route path='/products' element={<Products />} />

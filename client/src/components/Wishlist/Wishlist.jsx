@@ -4,6 +4,8 @@ import * as wishlistService from '../../services/wishlistService';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartCircleMinus, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-hot-toast';
+
 
 const Wishlist = () => {
   const { userId } = useContext(AuthContext);
@@ -47,11 +49,19 @@ const Wishlist = () => {
     try {
       await wishlistService.removeFromWishlist(wishlistItemId);
       setWishlist(currentWishlist => currentWishlist.filter(item => item.wishlistId !== wishlistItemId));
+      toast.success('Removed from wishlist successfully!')
     } catch (error) {
       console.error('Error removing item from wishlist:', error);
     }
   };
 
+  if (wishlist.length === 0) {
+    return (
+        <div className="container empty-cart">
+            <h2>Your wishlist is empty</h2>
+        </div>
+    );
+}
 
   return (
     <div className="container" style={{ paddingTop: '20px' }}>

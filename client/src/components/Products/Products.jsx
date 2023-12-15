@@ -4,6 +4,7 @@ import * as wishlistService from '../../services/wishlistService';
 import * as cartService from '../../services/cartService';
 import { Link } from 'react-router-dom';
 import '../../../public/styles/products.css'
+import { toast } from 'react-hot-toast';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faHeart, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
@@ -45,7 +46,7 @@ const Products = () => {
       }
 
       await wishlistService.addToWishlist(userId, product._id, category);
-      console.log('Product added to wishlist', userId, product._id, category);
+      toast.success('Added to wishlist successfully!')
     } catch (error) {
       console.error('Error adding product to wishlist:', error);
     }
@@ -60,7 +61,7 @@ const Products = () => {
       }
 
       await cartService.addToCart(userId, product._id, 1, category); // Include category here
-      console.log('Product added to cart', userId, product._id);
+      toast.success('Added to cart successfully!')
     } catch (error) {
       console.error('Error adding product to cart:', error);
     }

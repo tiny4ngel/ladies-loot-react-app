@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import AuthContext from '../../contexts/authContext';
 import '../../../public/styles/user-profile.css';
 import * as billingService from '../../services/billingService';
-
+import { toast } from 'react-hot-toast';
 
 const AccountInformation = () => {
     const { isAuthenticated } = useContext(AuthContext);
@@ -37,6 +37,7 @@ const AccountInformation = () => {
 
     const handleChange = (e) => {
         setBillingInfo({ ...billingInfo, [e.target.name]: e.target.value });
+        
     };
 
     const handleSubmit = async (e) => {
@@ -45,6 +46,7 @@ const AccountInformation = () => {
             const billingId = localStorage.getItem('billInfoId');
             const updatedData = await billingService.edit(billingId, billingInfo);
             setBillingInfo(updatedData);
+            toast.success('Successfully updated!')
         } catch (error) {
             console.error('Error:', error);
         }
