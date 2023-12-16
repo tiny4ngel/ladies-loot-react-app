@@ -19,3 +19,10 @@
 - **HTML & CSS**: For designing and styling the website.
 - **React Hot Toast**: For alert notifications.
 - **Softuni practice server**: Back-end.
+
+## Screenshots
+![1](https://github.com/tiny4ngel/ladies-loot-react-app/assets/66208546/fe842277-5075-4185-a190-4089f13482f9)
+![5](https://github.com/tiny4ngel/ladies-loot-react-app/assets/66208546/4fe99e9e-3d75-488a-a422-d8195ca8f552)
+![2](https://github.com/tiny4ngel/ladies-loot-react-app/assets/66208546/e4c31a84-1800-4c26-9f31-6ec0e154c471)
+![3](https://github.com/tiny4ngel/ladies-loot-react-app/assets/66208546/cd1dc54b-5e9d-40f4-8ee3-007e126bedc1)
+![4](https://github.com/tiny4ngel/ladies-loot-react-app/assets/66208546/f0866fb4-b1b1-4d8f-9037-6df4c45c4f4b)
