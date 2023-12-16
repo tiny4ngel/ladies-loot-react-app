@@ -1,4 +1,4 @@
-# LadiesLoot - mini react project designed for SoftUni ReactJs course
+# LadiesLoot - designed for SoftUni ReactJs course
 
 ## Introduction
 "LadiesLoot" is a specialized e-commerce platform designed for girl gamers. It focuses on providing gaming gear, furniture, gadgets, and accessories tailored to the unique tastes and preferences of its audience. The project is developed using React, featuring a vibrant, girl-focused pink UI designed and implemented using HTML and CSS.
