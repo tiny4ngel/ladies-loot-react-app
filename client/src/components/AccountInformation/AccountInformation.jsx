@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const AccountInformation = () => {
     const { isAuthenticated } = useContext(AuthContext);
     const [billingInfo, setBillingInfo] = useState({
-        email: '',
+        fullName: '',
         phone: '',
         city: '',
         address: '',
@@ -27,7 +27,7 @@ const AccountInformation = () => {
                 .then(setBillingInfo)
                 .catch(console.error);
         } else {
-            billingService.create({ email: '', phone: '', city: '', address: '', zip: '' })
+            billingService.create({ fullName: '', phone: '', city: '', address: '', zip: '' })
                 .then(data => {
                     localStorage.setItem('billInfoId', data._id);
                     setBillingInfo(data);
@@ -79,12 +79,12 @@ const AccountInformation = () => {
                 <div className="profile-form">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="email">Email Address</label>
+                            <label htmlFor="fullName">Full Name</label>
                             <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={billingInfo.email}
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                value={billingInfo.fullName}
                                 onChange={handleChange}
                                 required />
                         </div>

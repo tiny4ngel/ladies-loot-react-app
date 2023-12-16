@@ -34,3 +34,13 @@ export const updateCartItemQuantity = async (cartId, newQuantity) => {
         throw error;
     }
 };
+
+export const clearCartForUser = async (userId) => {
+    try {
+        const allCartItems = await getCartByUserId(userId);
+        const removalPromises = allCartItems.map(item => removeFromCart(item._id));
+        return Promise.all(removalPromises);
+    } catch (error) {
+        throw error;
+    }
+};

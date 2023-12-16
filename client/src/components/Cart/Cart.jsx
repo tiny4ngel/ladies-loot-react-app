@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import * as cartService from '../../services/cartService';
 import AuthContext from '../../contexts/authContext';
 import '../../../public/styles/cart.css'
+import { toast } from 'react-hot-toast';
 
 const Cart = () => {
     const { userId } = useContext(AuthContext);
@@ -66,6 +67,20 @@ const Cart = () => {
         return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
     };
 
+    const placeOrder = async () => {
+        try {
+
+            await cartService.clearCartForUser(userId);
+            setCartItems([]);
+
+            toast.success('Order placed successfully!');
+        } catch (error) {
+            console.error('Error placing order:', error);
+            toast.error('Failed to place order. Please try again.');
+        }
+    };
+
+
     if (cartItems.length === 0) {
         return (
             <div className="container empty-cart">
@@ -109,7 +124,7 @@ const Cart = () => {
                     <div className="summary-row">Subtotal: ${calculateSubtotal()}</div>
                     <div className="summary-row">Shipping: FREE</div>
                     <div className="summary-row total">Total: ${calculateSubtotal()}</div>
-                    <button className="checkout-button">PLACE ORDER</button>
+                    <button className="checkout-button" onClick={placeOrder}>PLACE ORDER</button>
                 </aside>
             </div>
         </div>
