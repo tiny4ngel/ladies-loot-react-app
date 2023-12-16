@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import AuthContext from '../../contexts/authContext';
 import * as wishlistService from '../../services/wishlistService';
+import * as cartService from '../../services/cartService';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartCircleMinus, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -55,22 +56,38 @@ const Wishlist = () => {
     }
   };
 
+  const handleAddToCart = async (productId, category) => {
+    try {
+      await cartService.addToCart(userId, productId, 1, category); // Assuming quantity is 1
+      toast.success('Added to cart successfully!');
+    } catch (error) {
+      console.error('Error adding item to cart:', error);
+      toast.error('Failed to add to cart.');
+    }
+  };
+
+
   if (wishlist.length === 0) {
     return (
-        <div className="container empty-cart">
-            <h2>Your wishlist is empty</h2>
-        </div>
+      <div className="container empty-cart">
+        <h2>Your wishlist is empty</h2>
+      </div>
     );
-}
+  }
 
   return (
     <div className="container" style={{ paddingTop: '20px' }}>
 
       <aside className="sidebar">
-        <div className="sidebar-item">BILLING INFORMATION</div>
-        <div className="sidebar-item">WISHLIST</div>
-        <div className="sidebar-item">CART</div>
+        <Link to={`/account`}>
+          <div className="sidebar-item">BILLING INFORMATION</div>
+        </Link>
+        <div className="sidebar-item" style={{ color: '#ffd1fc' }}>WISHLIST</div>
+        <Link to={`/cart`}>
+          <div className="sidebar-item">CART</div>
+        </Link>
       </aside>
+      
       <main className="products-container">
         {wishlist.map((item, index) => (
           <div className="item" key={index}>
@@ -86,7 +103,7 @@ const Wishlist = () => {
                 <button className="details-btn" onClick={() => handleRemoveFromWishlist(item.wishlistId)}>
                   <FontAwesomeIcon icon={faHeartCircleMinus} /><h5>Remove</h5>
                 </button>
-                <button className="details-btn">
+                <button className="details-btn" onClick={() => handleAddToCart(item._id, item.category)}>
                   <FontAwesomeIcon icon={faShoppingCart} /><h5>Add to Cart</h5>
                 </button>
               </div>

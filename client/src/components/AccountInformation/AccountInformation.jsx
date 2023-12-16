@@ -3,6 +3,7 @@ import AuthContext from '../../contexts/authContext';
 import '../../../public/styles/user-profile.css';
 import * as billingService from '../../services/billingService';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const AccountInformation = () => {
     const { isAuthenticated } = useContext(AuthContext);
@@ -16,7 +17,7 @@ const AccountInformation = () => {
 
     useEffect(() => {
         if (!isAuthenticated) {
-            return; 
+            return;
         }
 
         const billingId = localStorage.getItem('billInfoId');
@@ -37,7 +38,7 @@ const AccountInformation = () => {
 
     const handleChange = (e) => {
         setBillingInfo({ ...billingInfo, [e.target.name]: e.target.value });
-        
+
     };
 
     const handleSubmit = async (e) => {
@@ -56,9 +57,13 @@ const AccountInformation = () => {
     return (
         <div className="container">
             <aside className="sidebar">
-                <div className="sidebar-item">BILLING INFORMATION</div>
-                <div className="sidebar-item">WISHLIST</div>
-                <div className="sidebar-item">CART</div>
+                <div className="sidebar-item" style={{ color: '#ffd1fc' }}>BILLING INFORMATION</div>
+                <Link to={`/wishlist`}>
+                    <div className="sidebar-item">WISHLIST</div>
+                </Link>
+                <Link to={`/cart`}>
+                    <div className="sidebar-item">CART</div>
+                </Link>
             </aside>
             <main className="profile-main">
                 <div className="profile-header">
