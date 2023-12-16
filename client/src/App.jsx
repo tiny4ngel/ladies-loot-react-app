@@ -1,6 +1,6 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
-import AuthContext, { AuthProvider } from './contexts/authContext';
+import { AuthProvider } from './contexts/authContext';
 import Path from './paths';
 import { Toaster } from 'react-hot-toast';
 
@@ -13,24 +13,10 @@ import Register from './components/Register/Register';
 import Logout from './components/Logout/Logout';
 import ProductDetails from './components/Products/ProductDetails';
 import AccountInformation from './components/AccountInformation/AccountInformation';
-import { getMyBillingInfo } from './services/billingService';
 import Wishlist from './components/Wishlist/Wishlist';
 import Cart from './components/Cart/Cart';
 
 function App() {
-  const navigate = useNavigate();
-  // const [auth, setAuth] = useState(() => {
-  //   return {
-  //     accessToken: localStorage.getItem('accessToken'),
-  //     userId: localStorage.getItem('userId'),
-  //     email: '',
-  //     username: '',
-  //     isAuthenticated: !!localStorage.getItem('accessToken'),
-  //     billInfoId: localStorage.getItem('billInfoId'),
-  //   };
-  // });
-
-  
 
   return (
     <>
