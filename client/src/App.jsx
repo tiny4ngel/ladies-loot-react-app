@@ -26,7 +26,7 @@ function App() {
           position="top-center"
           reverseOrder={false}
           containerStyle={{
-            marginTop: '100px' // or however much margin you want
+            marginTop: '100px'
           }}
         />
         <Routes>
