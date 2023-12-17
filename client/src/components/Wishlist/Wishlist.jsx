@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartCircleMinus, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-hot-toast';
+import Path from '../../paths';
 
 
 const Wishlist = () => {
@@ -79,15 +80,15 @@ const Wishlist = () => {
     <div className="container" style={{ paddingTop: '20px' }}>
 
       <aside className="sidebar">
-        <Link to={`/account`}>
+        <Link to={Path.Account}>
           <div className="sidebar-item">BILLING INFORMATION</div>
         </Link>
         <div className="sidebar-item" style={{ color: '#ffd1fc' }}>WISHLIST</div>
-        <Link to={`/cart`}>
+        <Link to={Path.Cart}>
           <div className="sidebar-item">CART</div>
         </Link>
       </aside>
-      
+
       <main className="products-container">
         {wishlist.map((item, index) => (
           <div className="item" key={index}>

@@ -4,6 +4,7 @@ import AuthContext from '../../contexts/authContext';
 import '../../../public/styles/cart.css'
 import { toast } from 'react-hot-toast';
 
+
 const Cart = () => {
     const { userId } = useContext(AuthContext);
     const [cartItems, setCartItems] = useState([]);

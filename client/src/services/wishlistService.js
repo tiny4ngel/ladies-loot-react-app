@@ -2,6 +2,7 @@ import * as request from "../lib/request";
 
 const baseUrl = "data/wishlist";
 
+
 export const getWishlistByUserId = async (userId) => {
     try {
         const allWishlistItems = await request.get(baseUrl);

@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import { AuthProvider } from './contexts/authContext';
 import Path from './paths';
@@ -17,6 +17,7 @@ import Wishlist from './components/Wishlist/Wishlist';
 import Cart from './components/Cart/Cart';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 
+
 function App() {
 
   return (
@@ -32,13 +33,13 @@ function App() {
         />
         <Routes>
           <Route path={Path.Home} element={<Home />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/products/:category/:id' element={<ProductDetails />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/account' element={<AccountInformation />} />
-          <Route path='/wishlist' element={<Wishlist />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path={Path.Products} element={<Products />} />
+          <Route path={Path.ProductDetails} element={<ProductDetails />} />
+          <Route path={Path.Login} element={<Login />} />
+          <Route path={Path.Register} element={<Register />} />
+          <Route path={Path.Account} element={<AccountInformation />} />
+          <Route path={Path.Wishlist} element={<Wishlist />} />
+          <Route path={Path.Cart} element={<Cart />} />
           <Route path={Path.Logout} element={<Logout />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>

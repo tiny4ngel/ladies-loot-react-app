@@ -6,6 +6,8 @@ import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import { validateBillingInfo } from '../../utils/validationPatterns';
+import Path from '../../paths';
+
 
 const AccountInformation = () => {
     const { isAuthenticated } = useContext(AuthContext);
@@ -60,10 +62,10 @@ const AccountInformation = () => {
         <div className="container">
             <aside className="sidebar">
                 <div className="sidebar-item" style={{ color: '#ffd1fc' }}>BILLING INFORMATION</div>
-                <Link to={`/wishlist`}>
+                <Link to={Path.Wishlist}>
                     <div className="sidebar-item">WISHLIST</div>
                 </Link>
-                <Link to={`/cart`}>
+                <Link to={Path.Cart}>
                     <div className="sidebar-item">CART</div>
                 </Link>
             </aside>

@@ -2,6 +2,9 @@ import { useContext } from 'react';
 import '../../../public/styles/login.css'
 import useForm from '../../hooks/useForm';
 import AuthContext from '../../contexts/authContext';
+import Path from '../../paths';
+import { Link } from 'react-router-dom';
+
 
 const LoginFormKeys = {
     Email: 'email',
@@ -31,7 +34,7 @@ export default function Login() {
                             name={LoginFormKeys.Email}
                             placeholder="📧 Email Address"
                             onChange={onChange}
-                            value={ values.Email}
+                            value={values.Email}
                         />
                     </div>
                     <div className="input-group">
@@ -48,7 +51,7 @@ export default function Login() {
                     </div>
                 </form>
                 <div className="sign-up-text">
-                    Don't have an account? <a href="/">Sign Up</a>
+                    Don't have an account? <Link to={Path.Register}>Sign Up</Link>
                 </div>
             </div>
         </div>

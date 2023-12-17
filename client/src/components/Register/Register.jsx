@@ -2,6 +2,9 @@ import { useContext } from "react";
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
 import { validateRegistration } from "../../utils/validationPatterns";
+import Path from '../../paths';
+import { Link } from 'react-router-dom';
+
 
 const RegisterFormKeys = {
     Email: 'email',
@@ -70,7 +73,7 @@ export default function Register() {
                     </div>
                 </form>
                 <div class="sign-up-text">
-                    Already have an account? <a href="/">Sign In</a>
+                    Already have an account? <Link to={Path.Login}>Sign In</Link>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ import * as cartService from '../../services/cartService';
 import { toast } from 'react-hot-toast';
 import AuthContext from '../../contexts/authContext';
 
+
 const ProductDetails = () => {
     const [product, setProduct] = useState(null);
     const { category, id } = useParams();

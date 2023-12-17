@@ -1,5 +1,6 @@
 import { toast } from 'react-hot-toast';
 
+
 export const validateRegistration = (values) => {
     const emailRegex = /\S+@\S+\.\S+/;
     const passwordRegex = /[A-Za-z]/;
