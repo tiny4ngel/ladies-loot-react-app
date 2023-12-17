@@ -15,6 +15,7 @@ import ProductDetails from './components/Products/ProductDetails';
 import AccountInformation from './components/AccountInformation/AccountInformation';
 import Wishlist from './components/Wishlist/Wishlist';
 import Cart from './components/Cart/Cart';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
           <Route path='/wishlist' element={<Wishlist />} />
           <Route path='/cart' element={<Cart />} />
           <Route path={Path.Logout} element={<Logout />} />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
         <Footer />
       </AuthProvider>

@@ -68,7 +68,7 @@ export const AuthProvider = ({
             setAuth({ ...result, userId: result._id, isAuthenticated: true });
             navigate(Path.Home);
         } else {
-            console.error('Registration failed');
+            toast.error('Registration failed');
         }
     };
 
@@ -78,6 +78,7 @@ export const AuthProvider = ({
         localStorage.removeItem('billInfoId');
         setAuth({ accessToken: null, userId: null, isAuthenticated: false, billInfoId: null });
         navigate(Path.Home);
+        toast.success('You were logged out')
 
     };
 
