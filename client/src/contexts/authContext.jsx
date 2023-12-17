@@ -20,31 +20,43 @@ export const AuthProvider = ({
 
 
     const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.password);
-        const billingInfo = await getMyBillingInfo(result._id);
+        try {
+            const result = await authService.login(values.email, values.password);
 
-        if (result.accessToken) {
-            toast.success('Successfully logged in!')
-            localStorage.setItem('accessToken', result.accessToken);
-            localStorage.setItem('userId', result._id);
-            setAuth({ ...result, userId: result._id, isAuthenticated: true });
-            localStorage.setItem('userId', result._id);
-            try {
-                const billingInfo = await getMyBillingInfo(result._id);
+            if (result.accessToken) {
+                toast.success('Successfully logged in!');
+                localStorage.setItem('accessToken', result.accessToken);
+                localStorage.setItem('userId', result._id);
+                setAuth({ ...result, userId: result._id, isAuthenticated: true });
 
-                if (billingInfo) {
-                    localStorage.setItem('billInfoId', billingInfo._id);
+                try {
+                    const billingInfo = await getMyBillingInfo(result._id);
+                    if (billingInfo) {
+                        localStorage.setItem('billInfoId', billingInfo._id);
+                    }
+                } catch (error) {
+                    console.error('Error fetching billing information:', error);
                 }
 
-            } catch (error) {
-                console.error('Error fetching billing information:', error);
+                navigate(Path.Home);
+            } else {
+                if (result.code === 403) {
+                    toast.error('Login or password don\'t match. Please try again.');
+                } else {
+                    toast.error('Login failed. Please try again.');
+                }
             }
+        } catch (error) {
+            console.error('Login error:', error);
 
-            navigate(Path.Home);
+            if (error.code === 403) {
+                toast.error('Login or password don\'t match. Please try again.');
+            } else {
+                toast.error('An error occurred during login');
+            }
         }
-
-        navigate(Path.Home)
     };
+
 
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.email, values.password);

@@ -4,55 +4,57 @@ import '../../../public/styles/user-profile.css';
 import * as billingService from '../../services/billingService';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import useForm from '../../hooks/useForm';
+import { validateBillingInfo } from '../../utils/validationPatterns';
 
 const AccountInformation = () => {
     const { isAuthenticated } = useContext(AuthContext);
-    const [billingInfo, setBillingInfo] = useState({
+
+    const { values, onChange, onSubmit, setValues } = useForm(submitBillingInfo, {
         fullName: '',
         phone: '',
         city: '',
         address: '',
         zip: ''
-    });
+    }, validateBillingInfo);
 
-    useEffect(() => {
-        if (!isAuthenticated) {
-            return;
-        }
-
+    const fetchAndUpdateBillingInfo = async () => {
         const billingId = localStorage.getItem('billInfoId');
 
         if (billingId) {
-            billingService.getOne(billingId)
-                .then(setBillingInfo)
-                .catch(console.error);
+            try {
+                const data = await billingService.getOne(billingId);
+                setValues(prev => ({ ...prev, ...data }));
+            } catch (error) {
+                console.error(error);
+            }
         } else {
-            billingService.create({ fullName: '', phone: '', city: '', address: '', zip: '' })
-                .then(data => {
-                    localStorage.setItem('billInfoId', data._id);
-                    setBillingInfo(data);
-                })
-                .catch(console.error);
+            try {
+                const data = await billingService.create({ fullName: '', phone: '', city: '', address: '', zip: '' });
+                localStorage.setItem('billInfoId', data._id);
+                setValues(prev => ({ ...prev, ...data }));
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    };
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            fetchAndUpdateBillingInfo();
         }
     }, [isAuthenticated]);
 
-    const handleChange = (e) => {
-        setBillingInfo({ ...billingInfo, [e.target.name]: e.target.value });
-
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    async function submitBillingInfo(billingInfo) {
         try {
             const billingId = localStorage.getItem('billInfoId');
             const updatedData = await billingService.edit(billingId, billingInfo);
-            setBillingInfo(updatedData);
-            toast.success('Successfully updated!')
+            setValues(updatedData);
+            toast.success('Successfully updated!');
         } catch (error) {
             console.error('Error:', error);
         }
-    };
-
+    }
 
     return (
         <div className="container">
@@ -77,15 +79,15 @@ const AccountInformation = () => {
                     </div>
                 </div>
                 <div className="profile-form">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={onSubmit}>
                         <div className="form-group">
                             <label htmlFor="fullName">Full Name</label>
                             <input
                                 type="text"
                                 id="fullName"
                                 name="fullName"
-                                value={billingInfo.fullName}
-                                onChange={handleChange}
+                                value={values.fullName}
+                                onChange={onChange}
                                 required />
                         </div>
                         <div className="form-group">
@@ -94,8 +96,8 @@ const AccountInformation = () => {
                                 type="text"
                                 id="phone"
                                 name="phone"
-                                value={billingInfo.phone}
-                                onChange={handleChange}
+                                value={values.phone}
+                                onChange={onChange}
                                 required />
                         </div>
                         <div className="form-group">
@@ -104,8 +106,8 @@ const AccountInformation = () => {
                                 type="text"
                                 id="city"
                                 name="city"
-                                value={billingInfo.city}
-                                onChange={handleChange}
+                                value={values.city}
+                                onChange={onChange}
                                 required />
                         </div>
                         <div className="form-group">
@@ -114,8 +116,8 @@ const AccountInformation = () => {
                                 type="text"
                                 id="address"
                                 name="address"
-                                value={billingInfo.address}
-                                onChange={handleChange}
+                                value={values.address}
+                                onChange={onChange}
                                 required />
                         </div>
                         <div className="form-group">
@@ -124,8 +126,8 @@ const AccountInformation = () => {
                                 type="text"
                                 id="zip"
                                 name="zip"
-                                value={billingInfo.zip}
-                                onChange={handleChange}
+                                value={values.zip}
+                                onChange={onChange}
                                 required />
                         </div>
                         <button type="submit" className="update-button">Update Information</button>

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
+import { validateRegistration } from "../../utils/validationPatterns";
 
 const RegisterFormKeys = {
     Email: 'email',
@@ -16,7 +17,7 @@ export default function Register() {
         [RegisterFormKeys.Username]: '',
         [RegisterFormKeys.Password]: '',
         [RegisterFormKeys.ConfirmPassword]: '',
-    });
+    }, validateRegistration);
 
     return (
         <div class="login-container">
@@ -62,7 +63,7 @@ export default function Register() {
                             placeholder="🔑 Confrirm Password"
                             onChange={onChange}
                             values={values[RegisterFormKeys.ConfirmPassword]}
-                        />                    
+                        />
                     </div>
                     <div class="input-group">
                         <button type="submit">Sign up</button>
