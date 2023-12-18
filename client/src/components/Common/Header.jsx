@@ -14,26 +14,30 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div>
       <div className="navbar">
         <img src="images/logo.png" alt="LadiesLoot Logo" className="logo" />
         <span className="hamburger-icon" onClick={toggleMenu}>☰</span>
         <nav className={isMenuOpen ? "active" : ""}>
-          <Link to={Path.Home}>Home</Link>
-          <Link to={Path.Products}>Products</Link>
+          <Link to={Path.Home} onClick={closeMenu}>Home</Link>
+          <Link to={Path.Products} onClick={closeMenu}>Products</Link>
           {isAuthenticated && (
             <>
-              <Link to={Path.Account}>Account</Link>
-              <Link to={Path.Wishlist}>Wishlist</Link>
-              <Link to={Path.Logout}>Logout</Link>
-              <Link to={Path.Cart}><FontAwesomeIcon icon={faShoppingCart} /></Link>
+              <Link to={Path.Account} onClick={closeMenu}>Account</Link>
+              <Link to={Path.Wishlist} onClick={closeMenu}>Wishlist</Link>
+              <Link to={Path.Logout} onClick={closeMenu}>Logout</Link>
+              <Link to={Path.Cart} onClick={closeMenu}><FontAwesomeIcon icon={faShoppingCart} /></Link>
             </>
           )}
           {!isAuthenticated && (
             <>
-              <Link className="register" to={Path.Register}>Register</Link>
-              <Link className="login" to={Path.Login}>Log In</Link>
+              <Link className="register" to={Path.Register} onClick={closeMenu}>Register</Link>
+              <Link className="login" to={Path.Login} onClick={closeMenu}>Log In</Link>
             </>
           )}
         </nav>

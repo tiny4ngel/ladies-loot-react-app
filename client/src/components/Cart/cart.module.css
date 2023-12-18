@@ -2,7 +2,7 @@
     display: flex;
     min-height: 100vh;
     padding-top: 30px;
-    margin-top: 0px !important; 
+    margin-top: 0px !important;
     background: linear-gradient(-180deg, #ffd1fc 0%, #fad0c6 100%);
     margin-top: 40px;
     display: flex;
@@ -34,4 +34,22 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 20px;
+        margin-top: 60px;
+    }
+
+    .cartPageContainer {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .cartTable {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }

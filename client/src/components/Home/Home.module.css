@@ -11,6 +11,7 @@
 }
 
 .hero {
+    padding: 20px;
     flex: 1;
     display: flex;
     justify-content: space-around;

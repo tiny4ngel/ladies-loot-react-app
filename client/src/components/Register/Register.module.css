@@ -1,4 +1,4 @@
-.registerContainer{
+.registerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,12 +18,12 @@
     margin-top: -60px;
 }
 
-.inputGroup{
+.inputGroup {
     margin-bottom: 15px;
 }
 
 input {
-    font-family: 'Roboto Mono', monospace; 
+    font-family: 'Roboto Mono', monospace;
     width: 100%;
     padding: 10px;
     border: 2px solid #f292cf;
@@ -39,11 +39,11 @@ button {
     background-color: #f292cf;
     color: white;
     cursor: pointer;
-    font-family: 'Roboto Mono', monospace; 
+    font-family: 'Roboto Mono', monospace;
 }
 
 button:hover {
-    background-color: #e280b1; 
+    background-color: #e280b1;
 }
 
 
@@ -56,6 +56,18 @@ h2 {
 @media (max-width: 768px) {
     .registerForm {
         width: 90%;
+        margin-top: 100px;
+        padding-top: 80px;
         box-shadow: none;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1em;
     }
 }

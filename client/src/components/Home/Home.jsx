@@ -47,25 +47,25 @@ export default function Home() {
                         <div className="image-container">
                             <img src="images/keyboard-main.png" alt="Peripherals" />
                         </div>
-                        <button>PERIPHERALS</button>
+                        <button onClick={handleBrowseClick}>PERIPHERALS</button>
                     </div>
                     <div className="product-item">
                         <div className="image-container">
                             <img src="images/chair-main.png" alt="Furniture" />
                         </div>
-                        <button>FURNITURE</button>
+                        <button onClick={handleBrowseClick}>FURNITURE</button>
                     </div>
                     <div className="product-item">
                         <div className="image-container">
                             <img src="images/accessori-main.png" alt="Accessories" />
                         </div>
-                        <button>ACCESSORIES</button>
+                        <button onClick={handleBrowseClick}>ACCESSORIES</button>
                     </div>
                     <div className="product-item">
                         <div className="image-container">
                             <img src="images/gadget-main.png" alt="Tech Gadgets" />
                         </div>
-                        <button>TECH GADGETS</button>
+                        <button onClick={handleBrowseClick}>TECH GADGETS</button>
                     </div>
                 </div>
             </section>

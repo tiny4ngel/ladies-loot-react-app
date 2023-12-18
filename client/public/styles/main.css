@@ -617,6 +617,20 @@ footer p {
         margin: 20px 0;
     }
 
+    .avatar {
+        position: absolute;
+        top: -40px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    .avatar img {
+        width: 100%;
+        height: auto;
+    }
+
     .section-header h2 {
         font-size: 2em;
     }
@@ -660,6 +674,18 @@ footer p {
 
     .sidebar {
         width: 100%;
+        display: none;
+    }
+
+    .sidebar-cart {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .order-summary {
+        width: 100%;
+        margin-top: 20px;
     }
 
     .profile-main {
@@ -670,29 +696,57 @@ footer p {
         padding: 1rem;
     }
 
-    .cart-page-container {
-        flex-direction: column;
-        max-width: 100%;
+    .cart-table-header {
+        display: none;
     }
 
-    .cart-table,
+    .cart-table-row {
+        margin-top: 70px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .row-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .row-item img {
+        width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .quantity-selector {
+        justify-content: center;
+    }
+
+    .quantity-selector button,
+    .quantity-selector input {
+        margin: 5px;
+        padding: 5px;
+    }
+
     .sidebar-cart {
         width: 100%;
-        margin-right: 0;
     }
 
-    .order-summary {
+    .checkout-button {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     footer p {
         font-size: 0.8em;
+        padding: 20px;
     }
 
     .footer-nav {
         flex-wrap: wrap;
         justify-content: center;
+       
     }
 
     .footer-nav a {

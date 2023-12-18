@@ -88,7 +88,7 @@ const Products = () => {
 
   return (
 
-    <div className="products" style={{ marginTop: '150px' }}>
+    <div className="products" style={{ marginTop: '150px', padding: '20px' }}>
       {productItems.map((item, index) => (
         <div className="product-item" key={index}>
           <div className="image-container">
