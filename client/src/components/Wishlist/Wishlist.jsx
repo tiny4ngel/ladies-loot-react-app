@@ -61,7 +61,7 @@ const Wishlist = () => {
 
   const handleAddToCart = async (productId, category) => {
     try {
-      await cartService.addToCart(userId, productId, 1, category); // Assuming quantity is 1
+      await cartService.addToCart(userId, productId, 1, category); 
       toast.success('Added to cart successfully!');
     } catch (error) {
       console.error('Error adding item to cart:', error);
