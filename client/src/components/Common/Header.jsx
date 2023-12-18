@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AuthContext from "../../contexts/authContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,12 +8,18 @@ import Path from "../../paths";
 
 export default function Header() {
   const { isAuthenticated } = useContext(AuthContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div>
       <div className="navbar">
         <img src="images/logo.png" alt="LadiesLoot Logo" className="logo" />
-        <nav>
+        <span className="hamburger-icon" onClick={toggleMenu}>☰</span>
+        <nav className={isMenuOpen ? "active" : ""}>
           <Link to={Path.Home}>Home</Link>
           <Link to={Path.Products}>Products</Link>
           {isAuthenticated && (
@@ -22,7 +28,6 @@ export default function Header() {
               <Link to={Path.Wishlist}>Wishlist</Link>
               <Link to={Path.Logout}>Logout</Link>
               <Link to={Path.Cart}><FontAwesomeIcon icon={faShoppingCart} /></Link>
-
             </>
           )}
           {!isAuthenticated && (
@@ -31,7 +36,6 @@ export default function Header() {
               <Link className="login" to={Path.Login}>Log In</Link>
             </>
           )}
-
         </nav>
       </div>
       <div className="hero"></div>

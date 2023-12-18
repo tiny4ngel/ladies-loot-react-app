@@ -52,6 +52,16 @@ header {
     color: #ffffff;
 }
 
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar nav.active {
+    display: block;
+}
+
 
 .logo {
     width: 90px;
@@ -336,8 +346,6 @@ button:hover {
     color: inherit !important;
 }
 
-
-
 .upload-instructions {
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -480,8 +488,6 @@ button:hover {
     border-radius: 20px;
 }
 
-
-
 .summary-row {
     font-size: 1.2em;
     margin-bottom: 10px;
@@ -554,6 +560,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
     header {
         height: auto;
     }
@@ -579,15 +589,27 @@ footer p {
         align-items: flex-start;
     }
 
+
+    .hamburger-icon {
+        display: block;
+    }
+
     .navbar nav {
-        width: 100%;
-        display: flex;
+        display: none;
         flex-direction: column;
+        width: 100%;
         align-items: flex-start;
     }
 
+    .navbar nav.active {
+        display: flex;
+    }
+
     .navbar nav a {
-        margin: 10px 0;
+        padding: 10px;
+        margin: 5px 0;
+        width: 100%;
+        text-align: left;
     }
 
     .hero-title {
