@@ -3,11 +3,12 @@ import AuthContext from '../../contexts/authContext';
 import * as wishlistService from '../../services/wishlistService';
 import * as cartService from '../../services/cartService';
 import { Link } from 'react-router-dom';
-import '../../../public/styles/products.css'
 import { toast } from 'react-hot-toast';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faHeart, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+
+import styles from './Products.module.css';
 
 
 const Products = () => {
@@ -60,7 +61,7 @@ const Products = () => {
         return;
       }
 
-      await cartService.addToCart(userId, product._id, 1, category); // Include category here
+      await cartService.addToCart(userId, product._id, 1, category); 
       toast.success('Added to cart successfully!')
     } catch (error) {
       console.error('Error adding product to cart:', error);
@@ -99,18 +100,18 @@ const Products = () => {
         </div>
       ))}
 
-      <div className="products-container">
+      <div className={styles.productsContainer}>
         {displayProducts && displayProducts.map((product, index) => (
-          <div className="item" key={index}>
+          <div className={styles.item} key={index}>
             <Link to={`/products/${product.category}/${product._id}`}>
               <div className="product-image-container">
                 <img src={product.imgPath} alt={product.altText} />
               </div>
             </Link>
-            <div className="product-details">
-              <span className="product-name">{product.name}</span>
-              <p className="product-price">{product.price}$</p>
-              <div className="product-actions">
+            <div className={styles.productDetails}>
+              <span className={styles.productName}>{product.name}</span>
+              <p className={styles.productPrice}>{product.price}$</p>
+              <div className={styles.productActions}>
                 <Link to={`/products/${product.category}/${product._id}`}>
                   <button className="details-btn">
                     <FontAwesomeIcon icon={faInfoCircle} /><h5>Details</h5>

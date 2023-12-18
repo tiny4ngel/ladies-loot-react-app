@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Path from "../../paths";
 
+import styles from './Home.module.css';
+
 
 export default function Home() {
     const navigate = useNavigate();
@@ -12,10 +14,10 @@ export default function Home() {
     return (
         <div>
             <header>
-                <div className="hero">
+                <div className={styles.hero}>
                     <div className="hero-text">
-                        <img src="images/pixel.png" alt="pixel heart" className="pixel" />
-                        <h1 className="hero-title">LADIES LOOT</h1>
+                        <img src="images/pixel.png" alt="pixel heart" className={styles.pixel} />
+                        <h1 className={styles.heroTitle}>LADIES LOOT</h1>
                         <h3>Empower Your Play: Fashion & Gear for Girl Gamers</h3>
                         <p>Dive into the world of LadiesLoot,
                             where gaming and style collide!
@@ -25,7 +27,7 @@ export default function Home() {
                             experience with a touch of glamour.</p>
                         <button className="main-button" onClick={handleBrowseClick}>Browse</button>
                     </div>
-                    <img src="images/hero.png" alt="Gamer Girl" className="character-image" />
+                    <img src="images/hero.png" alt="Gamer Girl" className={styles.characterImage} />
                 </div>
 
             </header>

@@ -5,6 +5,8 @@ import { validateRegistration } from "../../utils/validationPatterns";
 import Path from '../../paths';
 import { Link } from 'react-router-dom';
 
+import styles from './Register.module.css';
+
 
 const RegisterFormKeys = {
     Email: 'email',
@@ -23,14 +25,14 @@ export default function Register() {
     }, validateRegistration);
 
     return (
-        <div class="login-container">
-            <div class="login-form">
+        <div class={styles.registerContainer}>
+            <div class={styles.registerForm}>
                 <div class="avatar">
                     <img src="images/hero.png" alt="Login Image" class="login-image" />
                 </div>
                 <h2>SIGN UP</h2>
                 <form onSubmit={onSubmit}>
-                    <div class="input-group">
+                    <div class={styles.inputGroup}>
                         <input
                             type="email"
                             id="email"
@@ -40,7 +42,7 @@ export default function Register() {
                             values={values[RegisterFormKeys.Email]}
                         />
                     </div>
-                    <div class="input-group">
+                    <div class={styles.inputGroup}>
                         <input
                             type="text"
                             id="username"
@@ -50,7 +52,7 @@ export default function Register() {
                             values={values[RegisterFormKeys.Username]}
                         />
                     </div>
-                    <div class="input-group">
+                    <div class={styles.inputGroup}>
                         <input
                             type="password"
                             id="password"
@@ -68,7 +70,7 @@ export default function Register() {
                             values={values[RegisterFormKeys.ConfirmPassword]}
                         />
                     </div>
-                    <div class="input-group">
+                    <div class={styles.inputGroup}>
                         <button type="submit">Sign up</button>
                     </div>
                 </form>

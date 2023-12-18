@@ -1,0 +1,60 @@
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heroTitle {
+    font-size: 6em; 
+    color: white; 
+    text-shadow:
+        -1px -1px 0 #89678f, 
+        1px -1px 0 #89678f, 
+        -1px 1px 0 #89678f, 
+        1px 1px 0 #89678f; 
+}
+
+.pixel {
+    width: 80px; 
+    height: auto; 
+   
+}
+
+.characterImage {
+    max-width: 900px; 
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    .characterImage {
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .heroTitle {
+        font-size: 3em; 
+        margin: 20px 0; 
+    }
+}
+

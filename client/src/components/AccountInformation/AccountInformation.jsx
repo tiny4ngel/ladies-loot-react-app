@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from 'react';
 import AuthContext from '../../contexts/authContext';
-import '../../../public/styles/user-profile.css';
 import * as billingService from '../../services/billingService';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import { validateBillingInfo } from '../../utils/validationPatterns';
 import Path from '../../paths';
+
+import styles from './AccountInformation.module.css';
 
 
 const AccountInformation = () => {
@@ -59,7 +60,7 @@ const AccountInformation = () => {
     }
 
     return (
-        <div className="container">
+        <div className={styles.container}>
             <aside className="sidebar">
                 <div className="sidebar-item" style={{ color: '#ffd1fc' }}>BILLING INFORMATION</div>
                 <Link to={Path.Wishlist}>
@@ -69,18 +70,18 @@ const AccountInformation = () => {
                     <div className="sidebar-item">CART</div>
                 </Link>
             </aside>
-            <main className="profile-main">
-                <div className="profile-header">
-                    <div className="image-upload-container">
-                        <div className="profile-picture-container">
-                            <img src="images/hero.png" alt="Profile Image" className="profile-picture" />
+            <main className={styles.profileMain}>
+                <div className={styles.profileHeader}>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.profilePicture}>
+                            <img src="images/hero.png" alt="Profile Image" className={styles.profilePicture} />
                         </div>
                         <div className="upload-details">
                             <p className="upload-instructions">Change your billing information</p>
                         </div>
                     </div>
                 </div>
-                <div className="profile-form">
+                <div className={styles.profileForm}>
                     <form onSubmit={onSubmit}>
                         <div className="form-group">
                             <label htmlFor="fullName">Full Name</label>

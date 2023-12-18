@@ -8,6 +8,8 @@ import { faHeartCircleMinus, faShoppingCart } from '@fortawesome/free-solid-svg-
 import { toast } from 'react-hot-toast';
 import Path from '../../paths';
 
+import styles from './Wishlist.module.css';
+
 
 const Wishlist = () => {
   const { userId } = useContext(AuthContext);
@@ -77,7 +79,7 @@ const Wishlist = () => {
   }
 
   return (
-    <div className="container" style={{ paddingTop: '20px' }}>
+    <div className={styles.container} style={{ paddingTop: '0px' }}>
 
       <aside className="sidebar">
         <Link to={Path.Account}>
@@ -89,18 +91,18 @@ const Wishlist = () => {
         </Link>
       </aside>
 
-      <main className="products-container">
+      <main className={styles.productsContainer}>
         {wishlist.map((item, index) => (
-          <div className="item" key={index}>
+          <div className={styles.item} key={index}>
             <Link to={`/products/${item.category}/${item._id}`}>
               <div className="product-image-container">
                 <img src={item.imgPath} alt={item.name} />
               </div>
             </Link>
-            <div className="product-details">
-              <span className="product-name">{item.name}</span>
-              <p className="product-price">{item.price}$</p>
-              <div className="product-actions">
+            <div className={styles.productsDetails}>
+              <span className={styles.productName}>{item.name}</span>
+              <p className={styles.productPrice}>{item.price}$</p>
+              <div className={styles.productActions}>
                 <button className="details-btn" onClick={() => handleRemoveFromWishlist(item.wishlistId)}>
                   <FontAwesomeIcon icon={faHeartCircleMinus} /><h5>Remove</h5>
                 </button>

@@ -1,4 +1,4 @@
-.login-container {
+.registerContainer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     background: linear-gradient(-180deg, #ffd1fc 0%, #fad0c6 100%);
 }
 
-.login-form {
+.registerForm {
     position: relative;
     background: #ffffffb5;
     padding: 30px;
@@ -18,22 +18,7 @@
     margin-top: -60px;
 }
 
-.avatar {
-    position: absolute;
-    top: -130px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 271px;
-    margin-bottom: 20px;
-    z-index: 10;
-}
-
-.avatar img {
-    width: 100%; 
-    height: auto; 
-}
-
-.input-group {
+.inputGroup{
     margin-bottom: 15px;
 }
 
@@ -61,16 +46,6 @@ button:hover {
     background-color: #e280b1; 
 }
 
-.sign-up-text {
-    margin-top: 20px;
-    font-family: 'Roboto Mono', monospace; 
-}
-
-.sign-up-text a {
-    color: #f292cf;
-    text-decoration: none;
-    font-family: 'Roboto Mono', monospace; 
-}
 
 h2 {
     color: #89678f;
@@ -78,9 +53,8 @@ h2 {
     font-family: 'Roboto Mono', monospace;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .login-form {
+    .registerForm {
         width: 90%;
         box-shadow: none;
     }

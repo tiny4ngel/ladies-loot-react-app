@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import * as cartService from '../../services/cartService';
 import AuthContext from '../../contexts/authContext';
-import '../../../public/styles/cart.css'
 import { toast } from 'react-hot-toast';
+
+import styles from './Cart.module.css';
 
 
 const Cart = () => {
@@ -90,10 +91,10 @@ const Cart = () => {
         );
     }
     return (
-        <div className="container">
+        <div className={styles.container}>
             {/* <h1 className='cart-text'>Your Cart</h1> */}
-            <div className="cart-page-container">
-                <div className="cart-table">
+            <div className={styles.cartPageContainer}>
+                <div className={styles.cartTable}>
                     {/* Cart Table Header */}
                     <div className="cart-table-header">
                         <div className="header-item">Product</div>

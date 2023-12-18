@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
-import '../../../public/styles/product-details.css'
 import { useParams } from 'react-router-dom';
 import * as wishlistService from '../../services/wishlistService';
 import * as cartService from '../../services/cartService';
 import { toast } from 'react-hot-toast';
 import AuthContext from '../../contexts/authContext';
+
+import styles from './ProductDetails.module.css';
 
 
 const ProductDetails = () => {
@@ -41,7 +42,7 @@ const ProductDetails = () => {
 
     const handleAddToCart = async () => {
         try {
-            await cartService.addToCart(userId, id, 1, category); // Quantity is set to 1 by default
+            await cartService.addToCart(userId, id, 1, category); 
             toast.success('Added to cart successfully!');
         } catch (error) {
             console.error('Error adding product to cart:', error);
@@ -54,18 +55,18 @@ const ProductDetails = () => {
     }
 
     return (
-        <div className="product-detail-page">
-            <div className="product-image-wrapper">
-                <img src={`/${product.imgPath}`} alt={product.name} className="product-image" />
+        <div className={styles.productDetailPage}>
+            <div className={styles.productImageWrapper}>
+                <img src={`/${product.imgPath}`} alt={product.name} className={styles.productImage} />
             </div>
-            <div className="product-details-wrapper">
-                <h1 className="product-title">{product.name}</h1>
+            <div className={styles.productDetailsWrapper}>
+                <h1 className={styles.productTitle}>{product.name}</h1>
                 <p className="product-category">{product.category}</p>
                 <p className="product-price">${product.price}</p>
                 {/* Implement rating system*/}
                 <p className="product-description">{product.description}</p>
-                <button className="btn add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
-                <button className="btn add-to-wishlist" onClick={handleAddToWishlist}>Wishlist</button>
+                <button className="btn-p add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
+                <button className="btn-p add-to-wishlist" onClick={handleAddToWishlist}>Wishlist</button>
             </div>
         </div>
     );

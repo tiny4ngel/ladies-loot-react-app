@@ -1,0 +1,13 @@
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerHeart {
+    width: 50px; 
+    height: auto;
+    margin: 15px 0;
+}
+
